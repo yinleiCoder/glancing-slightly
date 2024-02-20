@@ -1,6 +1,6 @@
 # 微瞥（家庭相册、关系图谱）
 
-> 全栈综合解决方案：前台+中台+后台
+> 全栈综合解决方案：前台 + 中台 + 后台
 
 ## 技术栈
 
@@ -16,3 +16,5 @@
 - [Vue Router](https://router.vuejs.org/zh/introduction.html)
 - [Pinia](https://pinia.vuejs.org/zh/introduction.html)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
+- [VueUse](https://vueuse.org/)
+- [axios](https://axios-http.com/docs/intro)

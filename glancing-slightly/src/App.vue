@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="bg-red-900">Hello World</div>
+  <router-view></router-view>
 </template>
 
 <style scoped></style>
