@@ -18,7 +18,7 @@ const menus = [
   <yl-popover class="flex items-center" placement="bottom-left">
     <template #reference>
       <div
-        class="relative flex items-center p-0.5 rounded cursor-pointer duration-200 outline-0 hover:bg-zinc-100"
+        class="relative flex items-center p-0.5 rounded cursor-pointer duration-200 outline-0 hover:bg-zinc-100 dark:hover:bg-zinc-900"
       >
         <img
           class="w-4 h-4 rounded-full object-cover"
@@ -28,22 +28,22 @@ const menus = [
         <yl-svg-icon
           class="h-2.5 w-2.5 ml-0.5"
           name="arrowdown"
-          fillClass="fill-zinc-900"
+          fillClass="fill-zinc-900 dark:fill-zinc-300"
         ></yl-svg-icon>
       </div>
     </template>
     <div class="w-[140px] overflow-hidden">
       <div
-        class="flex items-center p-1 cursor-pointer rounded hover:bg-zinc-100"
+        class="flex items-center p-1 cursor-pointer rounded hover:bg-zinc-100 dark:hover:bg-zinc-800"
         v-for="item in menus"
         :key="item.id"
       >
         <yl-svg-icon
           :name="item.icon"
           class="w-1.5 h-1.5 mr-1"
-          fillClass="fill-zinc-900"
+          fillClass="fill-zinc-900 dark:fill-zinc-300"
         ></yl-svg-icon>
-        <span class="text-zinc-800 text-sm">{{ item.title }}</span>
+        <span class="text-zinc-800 text-sm dark:text-zinc-300">{{ item.title }}</span>
       </div>
     </div>
   </yl-popover>

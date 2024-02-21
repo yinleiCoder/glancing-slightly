@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -11,7 +12,8 @@ export default {
         xl: ['0.65rem', '0.75rem']
       },
       boxShadow: {
-        'l-white': '-10px 0 10px white'
+        'l-white': '-10px 0 10px white',
+        'l-zinc': '-10px 0 10px #1818b'
       },
       height: {
         header: '72px',

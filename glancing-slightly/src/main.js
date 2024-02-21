@@ -4,6 +4,7 @@ import router from './router'
 import './styles/index.css'
 import App from './App.vue'
 import { useRem } from './utils/flexible'
+import useTheme from './utils/theme'
 import ylLibs from './libs'
 import 'virtual:svg-icons-register'
 
@@ -16,5 +17,6 @@ app.use(router)
 app.use(ylLibs)
 
 useRem()
+useTheme()
 
 app.mount('#app')
