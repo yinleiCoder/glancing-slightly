@@ -1,14 +1,11 @@
 <script setup>
 import { onBeforeUpdate, ref, watch } from 'vue'
 import { useScroll } from '@vueuse/core'
+import { useCategoryStore } from '@/stores/category'
 import Menu from '@/views/main/components/menu/index.vue'
 
-defineProps({
-  data: {
-    type: Array,
-    required: true
-  }
-})
+const categoryStore = useCategoryStore()
+
 const sliderStyle = ref({
   transform: 'translateX(0px)',
   width: '52px'
@@ -72,7 +69,7 @@ const onItemClick = (index) => {
         <yl-svg-icon name="hamburger" class="w-1.5 h-1.5"></yl-svg-icon>
       </li>
       <li
-        v-for="(item, index) in data"
+        v-for="(item, index) in categoryStore.categories"
         :key="item._id"
         class="shrink-0 px-1.5 py-0.5 z-10 duration-200 last:mr-4"
         :class="{ 'text-zinc-100': currentCategoryIndex === index }"
@@ -83,7 +80,7 @@ const onItemClick = (index) => {
       </li>
     </ul>
     <yl-popup v-model="isPopupShow"
-      ><Menu :categories="data" @onItemClick="onItemClick"
+      ><Menu @onItemClick="onItemClick"
     /></yl-popup>
   </div>
 </template>

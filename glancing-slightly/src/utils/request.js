@@ -7,6 +7,9 @@ const service = axios.create({
 
 service.interceptors.request.use(
   function (config) {
+    if (localStorage.token) {
+      config.headers.Authorization = `Bearer ${localStorage.token}`
+    }
     return config
   },
   function (error) {
@@ -20,6 +23,9 @@ service.interceptors.response.use(
     return data
   },
   function (error) {
+    if (error.response.data.message) {
+      // 后端给的错误信息
+    }
     return Promise.reject(error)
   }
 )

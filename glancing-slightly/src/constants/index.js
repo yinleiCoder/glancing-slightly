@@ -3,7 +3,7 @@ export const PC_DEVICE_WIDTH = 1280
 
 // 全部分类数据
 export const ALL_CATEGORY_ITEM = {
-  id: 'all',
+  _id: 'all',
   name: '全部'
 }
 

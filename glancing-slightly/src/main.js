@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { createPersistedState } from 'pinia-plugin-persistedstate'
 import router from './router'
 import './styles/index.css'
 import App from './App.vue'
@@ -9,6 +10,11 @@ import ylLibs from './libs'
 import 'virtual:svg-icons-register'
 
 const pinia = createPinia()
+pinia.use(
+  createPersistedState({
+    auto: true
+  })
+)
 
 const app = createApp(App)
 
